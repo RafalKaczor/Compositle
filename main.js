@@ -91929,19 +91929,19 @@ $(document).ready(function () {
       return Math.round(t / 864e5);
     }
     function Da(e) {
-        if (localStorage.getItem('start') === null) {
-            const d = new Date();
-            localStorage.setItem('start', d);
-        }
-        const date1 = new Date(localStorage.getItem('start'));
-        const date2 = new Date();
-        const diffTime = Math.abs(date2 - date1);
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
-        console.log(La[diffDays - 1]);
+      if (localStorage.getItem('xa') === null) {
+          const d = new Date();
+          localStorage.setItem('xa', "Sun Jul 04 2022 0:0:0");
+      }
+      const date1 = new Date(localStorage.getItem('xa'));
+      const date2 = new Date();
+      const diffTime = Math.abs(date2 - date1);
+      const diffDays = parseInt(diffTime / (1000 * 60 * 60 * 24)); 
+      console.log(La[diffDays]);
       var a,
         s = Ga(e);
       s = reversedNum(s);
-      return (a = s % La.length), La[diffDays - 1];
+      return (a = s % La.length), La[diffDays];
     }
     function Ga(e) {
       return Na(Ha, e);
